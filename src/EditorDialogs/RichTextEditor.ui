@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RichTextEditor</class>
+ <widget class="QWidget" name="RichTextEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>692</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QToolButton" name="toolButtonEditCut">
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normalon>:/images/RichTextEditor/edit-cut.png</normalon>
+        </iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButtonEditCopy">
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normalon>:/images/RichTextEditor/edit-copy.png</normalon>
+        </iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButtonEditPaste">
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normalon>:/images/RichTextEditor/edit-paste.png</normalon>
+        </iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButtonEditDelete">
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normalon>:/images/RichTextEditor/edit-delete.png</normalon>
+        </iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButtonEditUndo">
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normalon>:/images/RichTextEditor/edit-undo.png</normalon>
+        </iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButtonEditRedo">
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normalon>:/images/RichTextEditor/edit-redo.png</normalon>
+        </iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_3">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButtonInsertHyperLink">
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset resource="RichTextEditor.qrc">
+         <normaloff>:/images/RichTextEditor/insert-link.png</normaloff>:/images/RichTextEditor/insert-link.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_10">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>629</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QToolButton" name="toolButtonMakeBold">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>B</string>
+       </property>
+       <property name="shortcut">
+        <string>Ctrl+B</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButtonMakeItalicised">
+       <property name="font">
+        <font>
+         <italic>true</italic>
+        </font>
+       </property>
+       <property name="text">
+        <string>I</string>
+       </property>
+       <property name="shortcut">
+        <string>Ctrl+I</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButtonMakeUnderlined">
+       <property name="font">
+        <font>
+         <underline>true</underline>
+        </font>
+       </property>
+       <property name="text">
+        <string>U</string>
+       </property>
+       <property name="shortcut">
+        <string>Ctrl+U</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButtonMakeStriken">
+       <property name="font">
+        <font>
+         <strikeout>true</strikeout>
+        </font>
+       </property>
+       <property name="text">
+        <string>S</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButtonAlignLeft">
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normalon>:/images/RichTextEditor/format-justify-left.png</normalon>
+        </iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButtonAlignCenter">
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normalon>:/images/RichTextEditor/format-justify-center.png</normalon>
+        </iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButtonAlignRight">
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normalon>:/images/RichTextEditor/format-justify-right.png</normalon>
+        </iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButtonAlignJustify">
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normalon>:/images/RichTextEditor/format-justify-fill.png</normalon>
+        </iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_4">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFontComboBox" name="fontComboBoxSelectFont">
+       <property name="currentFont">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBoxFontSize">
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+       <property name="currentIndex">
+        <number>4</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>6</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>7</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>8</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>9</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>10</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>10.5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>11</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>12</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>13</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>14</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>15</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>16</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>18</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>20</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>22</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>24</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>26</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>28</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>32</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>36</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>40</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>44</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>48</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>54</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>60</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>66</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>72</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>80</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>88</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>96</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButtonSelectColor">
+       <property name="text">
+        <string>Color</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Use &lt;b&gt;Ctrl+space&lt;/b&gt; to autocomplete an Individual from the family tree, and &lt;b&gt;ctrl+M&lt;/b&gt; to autocomplete a family from the tree.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="TextEditWithAutoComplete" name="textEdit">
+     <property name="autoFormatting">
+      <set>QTextEdit::AutoAll</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TextEditWithAutoComplete</class>
+   <extends>QTextEdit</extends>
+   <header>TextEditWithAutoComplete.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="RichTextEditor.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>toolButtonEditUndo</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit</receiver>
+   <slot>undo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>135</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>136</x>
+     <y>72</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonEditRedo</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit</receiver>
+   <slot>redo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>167</x>
+     <y>16</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>166</x>
+     <y>89</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonEditPaste</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit</receiver>
+   <slot>paste()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>80</x>
+     <y>22</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>74</x>
+     <y>82</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>textEdit</sender>
+   <signal>redoAvailable(bool)</signal>
+   <receiver>toolButtonEditRedo</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>194</x>
+     <y>100</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>174</x>
+     <y>19</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>textEdit</sender>
+   <signal>undoAvailable(bool)</signal>
+   <receiver>toolButtonEditUndo</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>115</x>
+     <y>97</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>136</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>textEdit</sender>
+   <signal>copyAvailable(bool)</signal>
+   <receiver>toolButtonEditPaste</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>86</x>
+     <y>129</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>75</x>
+     <y>14</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonEditCut</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit</receiver>
+   <slot>cut()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>18</x>
+     <y>24</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>15</x>
+     <y>81</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonEditCopy</sender>
+   <signal>clicked()</signal>
+   <receiver>textEdit</receiver>
+   <slot>copy()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>45</x>
+     <y>14</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>45</x>
+     <y>84</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonAlignLeft</sender>
+   <signal>clicked()</signal>
+   <receiver>RichTextEditor</receiver>
+   <slot>setAlignLeft()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>173</x>
+     <y>63</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>634</x>
+     <y>35</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonAlignCenter</sender>
+   <signal>clicked()</signal>
+   <receiver>RichTextEditor</receiver>
+   <slot>setAlignCenter()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>203</x>
+     <y>63</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>661</x>
+     <y>34</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonAlignRight</sender>
+   <signal>clicked()</signal>
+   <receiver>RichTextEditor</receiver>
+   <slot>setAlignRight()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>233</x>
+     <y>63</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>661</x>
+     <y>35</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonAlignJustify</sender>
+   <signal>clicked()</signal>
+   <receiver>RichTextEditor</receiver>
+   <slot>setAlignJustify()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>263</x>
+     <y>53</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>661</x>
+     <y>3</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fontComboBoxSelectFont</sender>
+   <signal>currentFontChanged(QFont)</signal>
+   <receiver>textEdit</receiver>
+   <slot>setCurrentFont(QFont)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>335</x>
+     <y>63</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>391</x>
+     <y>83</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonMakeBold</sender>
+   <signal>clicked()</signal>
+   <receiver>RichTextEditor</receiver>
+   <slot>setFontBoldened()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>35</x>
+     <y>44</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>187</x>
+     <y>2</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonMakeItalicised</sender>
+   <signal>clicked()</signal>
+   <receiver>RichTextEditor</receiver>
+   <slot>setFontItalicized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>67</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>239</x>
+     <y>1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonMakeUnderlined</sender>
+   <signal>clicked()</signal>
+   <receiver>RichTextEditor</receiver>
+   <slot>setFontUnderlined()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>102</x>
+     <y>58</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonMakeStriken</sender>
+   <signal>clicked()</signal>
+   <receiver>RichTextEditor</receiver>
+   <slot>setFontStriken()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>136</x>
+     <y>57</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>292</x>
+     <y>3</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBoxFontSize</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>RichTextEditor</receiver>
+   <slot>setFontPointSize(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>591</x>
+     <y>63</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>486</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonSelectColor</sender>
+   <signal>clicked()</signal>
+   <receiver>RichTextEditor</receiver>
+   <slot>showColorDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>652</x>
+     <y>64</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>3</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>textEdit</sender>
+   <signal>textChanged()</signal>
+   <receiver>RichTextEditor</receiver>
+   <slot>setTextChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>579</x>
+     <y>291</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>2</x>
+     <y>425</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonInsertHyperLink</sender>
+   <signal>clicked()</signal>
+   <receiver>RichTextEditor</receiver>
+   <slot>insertHyperLink()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>224</x>
+     <y>21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>467</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>setAlignLeft()</slot>
+  <slot>setAlignRight()</slot>
+  <slot>setAlignCenter()</slot>
+  <slot>setAlignJustify()</slot>
+  <slot>setFontBoldened()</slot>
+  <slot>setFontItalicized()</slot>
+  <slot>setFontUnderlined()</slot>
+  <slot>setFontStriken()</slot>
+  <slot>setFontPointSize(QString)</slot>
+  <slot>showColorDialog()</slot>
+  <slot>setTextChanged()</slot>
+  <slot>insertHyperLink()</slot>
+  <slot>insertIndividualLink(int)</slot>
+  <slot>insertFamilyLink(int)</slot>
+ </slots>
+</ui>

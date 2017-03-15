@@ -1,0 +1,33 @@
+# if defined(UNDER_CE)
+#  include "winbase.h"
+# else
+#  include "winver.h"
+# endif
+VS_VERSION_INFO VERSIONINFO
+	FILEVERSION 0,91,13,23
+	PRODUCTVERSION 0,91,13,23
+	FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+	FILEFLAGS VS_FF_DEBUG
+#else
+	FILEFLAGS 0x0L
+#endif
+	FILEOS VOS__WINDOWS32
+	FILETYPE VFT_DLL
+	FILESUBTYPE 0x0L
+	BEGIN
+		BLOCK "StringFileInfo"
+		BEGIN
+			BLOCK "040904B0"
+			BEGIN
+				VALUE "CompanyName", "69Solutions\0"
+				VALUE "FileDescription", "Familier Executable\0"
+				VALUE "FileVersion", "0.91.13.23\0"
+				VALUE "LegalCopyright", "Copyright (c) Neeraj Jakhar 2009-11.\0"
+				VALUE "OriginalFilename", "Familier.exe\0"
+				VALUE "ProductName", "Familier\0"
+			END
+		END
+	END
+/* End of Version info */
+IDI_ICON1               ICON    DISCARDABLE     "familier.ico"

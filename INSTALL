@@ -1,0 +1,11 @@
+
+To install Familier please follow the following steps:
+
+1) qmake
+2) make
+3) make install
+
+Step (3) might require root privileges.
+
+Familier requires QT >= 4.7
+

@@ -1,0 +1,67 @@
+Only versions that are released to public are mentioned over here.
+
+0.91.13.22
+	* Defect Fix: Fixed locking and unlocking related defect.
+
+0.91.13.21
+	* Defect Fix: Fixed a defect where window was undocking even when wrong password was entered.
+
+0.91.13.20
+	* Feature Addition: Added support for locking and passwords. This provides some sort of protection for your private data, when application is runnning in system tray. This is not fool proof intentionally. For example, you can go to preferences and change the password. If required this behavior can be changed later on.
+	* Defect Fix: Fixed HTML tag matcher to minimal matching
+	* Defect Fix: Icon view returns to its state after tab change.
+	* Defect Fix: Session Manager enhanced to work with Linux and system shutdown.
+	* Defect Fix: Today events list shown in system tray does not break with comma.
+	* Defect Fix: Adding (as opposed to editing) dates in Tree/Table view was causing application to crash. This has been fixed.
+
+0.91.13.14
+	* Defect Fix: Item view manager now shows image properly resized.
+	* Defect Fix: Icon view is now more responsive. The issue of it being non-responsive is resolved.
+
+0.91.13.12
+	* Feature Addition: Added support for displaying (Indian) relatives in item description page.
+	* Feature Addition: Added support for system tray.
+	* Defect Fix: Icon title was not showing properly in icon view.
+	* Defect Fix: Fixed displaying of dummy individuals in item view.
+	* Defect Fix: No statistics for female individuals in the various views.
+
+0.91.13.4
+	* Feature Addition: In edit individual dialog box now you can click on image to select another image.
+	* Feature Addition: Software now prompts before opening outside links in web browser.
+	* Feature Addition: Changed default font type and size for rich text editor.
+	* Feature Addition: Items in Table View can now be sorted.
+	* Feature Addition: It is now possible to list items with images only in list and icon views.
+	* Feature Addition: Full text search is now implemented.
+	* Feature Improvement: File loading speed has improved considerably.
+	* Defect Fix: Fixed a bug, where new individual added in any of tree views was not showing up in icon/list/table views.
+	* Defect Fix: Fixed a defect where Individual edit dialog box was not converting FHTML.
+	* Defect Fix: Fixed a defect where it was impossible to hyperlink currently selected text.
+	* Defect Fix: Fixed a defect where name info string was not getting shown on screen in one particular case.
+
+0.91.12.13
+	* Defect Fix: Status bar - today's event scrolling issue fixed.
+	* Defect Fix: Incomplete dates were not coming in export to GEDCOM format.
+	* Feature Addition: Preferences dialog box introduced. Now export can be configured to forcibly export last name.
+
+0.91.12.12
+	* Defect Fix: Dates with years only were not coming in export to GEDCOM format.
+
+0.91.12.11
+	* Feature Addition: Family Tree View now supports scrolling through ctrl and alt modifiers.
+	* Feature Addition: Session management support added.
+	* Feature Addition: Import of GEDCOM files is now possible.
+	* Feature Addition: MovingTextLable widget now supports HTML.
+	* Feature Addition: Events that happened today are displayed in status bar.
+	* Feature Addition: Individual and family tree view now displays more grammatically correct English.
+	* Feature Addition: Statistics page now shows statistics regarding usage of first names.
+	* Defect Fix: Status bar tooltip and item click issue fixed. They were not working earlier.
+	* Defect Fix: Aliases were not properly edited through the views.
+	* Defect Fix: Fixed The issue of profile image files not picking up right path for individual.
+	* Defect Fix: Fixed a defect where Editing in item view was not working with all views.
+
+0.91.11.51:
+	* Defect Fix: Fixed a defect where uid was causing description to have static URLs.
+	* Defect Fix: Fixed a defect where individuals from last family were not showing up in Table/List/Icon View.
+
+0.91.11.49:
+	* First public release of Familier.

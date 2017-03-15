@@ -1,0 +1,1309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>824</width>
+    <height>545</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Familier 1.0</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="MainWindow.qrc">
+    <normaloff>:/images/familier.png</normaloff>:/images/familier.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tabFamilyTreeView">
+       <attribute name="title">
+        <string>Family Tree View</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="FamilyTreeView" name="familyTreeView" native="true">
+          <property name="styleSheet">
+           <string notr="true"> FamilyTreeView { background-color: black; }</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabEventTimeLineView">
+       <attribute name="title">
+        <string>Event Time Line</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="EventTimeLineView" name="eventTimeLineView" native="true">
+          <property name="styleSheet">
+           <string notr="true"> EventTimeLineView { background-color: black; }</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabStatisticsView">
+       <attribute name="title">
+        <string>Statistics View</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QScrollArea" name="scrollAreaStatisticsView">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContentsStatisticsView">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1212</width>
+             <height>1574</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_2">
+            <item row="0" column="0">
+             <widget class="PieView" name="familyAllIndividualsStatsPieView" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>600</width>
+                <height>310</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="PieView" name="familyMaleIndividualsStatsPieView" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>600</width>
+                <height>310</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="PieView" name="genderStatsPieView" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>600</width>
+                <height>310</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="PieView" name="aliveOrDeadStatsPieView" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>600</width>
+                <height>310</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="PieView" name="marriageStatsPieView" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>600</width>
+                <height>310</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="PieView" name="haveChildrenStatsPieView" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>600</width>
+                <height>310</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+	     <widget class="PieView" name="spouseCountStatsPieView" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>600</width>
+                <height>310</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="PieView" name="childCountStatsPieView" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>600</width>
+                <height>310</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+	    <item row="4" column="0">
+	     <widget class="PieView" name="childCountStatsForMarriedPieView" native="true">
+	      <property name="minimumSize">
+	       <size>
+		<width>600</width>
+		<height>310</height>
+	       </size>
+	      </property>
+	     </widget>
+	    </item>
+	    <item row="4" column="1">
+             <widget class="PieView" name="sameNameCountStatsPieView" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>600</width>
+                <height>310</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabFamilyNodeView">
+       <attribute name="title">
+        <string>Family Node View</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QStackedWidget" name="stackedWidget">
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="pageTreeView">
+             <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <item>
+               <widget class="QTreeView" name="treeView">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="contextMenuPolicy">
+                 <enum>Qt::CustomContextMenu</enum>
+                </property>
+                <property name="acceptDrops">
+                 <bool>true</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"> QTreeView { background-color: black; }</string>
+                </property>
+                <property name="tabKeyNavigation">
+                 <bool>true</bool>
+                </property>
+                <property name="dragEnabled">
+                 <bool>true</bool>
+                </property>
+                <property name="horizontalScrollMode">
+                 <enum>QAbstractItemView::ScrollPerItem</enum>
+                </property>
+                <property name="autoExpandDelay">
+                 <number>500</number>
+                </property>
+                <property name="animated">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="pageListView">
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <widget class="QListView" name="listView">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="contextMenuPolicy">
+                 <enum>Qt::CustomContextMenu</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"> QListView { background-color: black; }</string>
+                </property>
+                <property name="tabKeyNavigation">
+                 <bool>true</bool>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>60</width>
+                  <height>60</height>
+                 </size>
+                </property>
+                <property name="layoutMode">
+                 <enum>QListView::Batched</enum>
+                </property>
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="gridSize">
+                 <size>
+                  <width>80</width>
+                  <height>80</height>
+                 </size>
+                </property>
+                <property name="uniformItemSizes">
+                 <bool>false</bool>
+                </property>
+                <property name="wordWrap">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="pageTableView">
+             <layout class="QHBoxLayout" name="horizontalLayout_8">
+              <item>
+               <widget class="QTableView" name="tableView">
+                <property name="contextMenuPolicy">
+                 <enum>Qt::CustomContextMenu</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"> QTableView { background-color: black; }</string>
+                </property>
+                <property name="selectionMode">
+                 <enum>QAbstractItemView::SingleSelection</enum>
+                </property>
+                <property name="showGrid">
+                 <bool>false</bool>
+                </property>
+                <property name="sortingEnabled">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextBrowser" name="textBrowserItemView">
+            <property name="styleSheet">
+             <string notr="true"> QTextBrowser { color: white; background-color: black; }</string>
+            </property>
+            <property name="openLinks">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabEventView">
+       <attribute name="title">
+        <string>Events View</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QTableView" name="tableViewForEvents">
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QToolButton" name="toolButtonEventAdd">
+            <property name="text">
+             <string>...</string>
+            </property>
+            <property name="icon">
+             <iconset resource="MainWindow.qrc">
+              <normaloff>:/images/expandall.png</normaloff>:/images/expandall.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="toolButtonEventDelete">
+            <property name="text">
+             <string>...</string>
+            </property>
+            <property name="icon">
+             <iconset resource="MainWindow.qrc">
+              <normaloff>:/images/collapseall.png</normaloff>:/images/collapseall.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>824</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_Help">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="action_FAQ"/>
+    <addaction name="action_What_s_this"/>
+    <addaction name="separator"/>
+    <addaction name="action_About"/>
+    <addaction name="action_About_Qt"/>
+   </widget>
+   <widget class="QMenu" name="menuNavigate">
+    <property name="title">
+     <string>&amp;Navigate</string>
+    </property>
+    <addaction name="action_Go_to_Previous"/>
+    <addaction name="action_Go_to_Next"/>
+    <addaction name="separator"/>
+    <addaction name="action_Scroll_to_Top"/>
+    <addaction name="action_Scroll_to_Bottom"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <addaction name="action_Edit_Inline"/>
+    <addaction name="action_Mark_as_Alive"/>
+    <addaction name="action_Mark_as_Dead"/>
+    <addaction name="action_Mark_as_Dummy"/>
+    <addaction name="action_Unmark_as_Dummy"/>
+    <addaction name="separator"/>
+    <addaction name="action_Edit"/>
+    <addaction name="action_Delete"/>
+    <addaction name="separator"/>
+    <addaction name="action_Add_Family"/>
+    <addaction name="separator"/>
+    <addaction name="action_Add_Spouse"/>
+    <addaction name="action_Add_Dummy_Spouse"/>
+    <addaction name="action_Add_Male_Sibling"/>
+    <addaction name="action_Add_Female_Sibling"/>
+    <addaction name="action_Add_Wife_in_Law"/>
+    <addaction name="action_Add_Male_Child"/>
+    <addaction name="action_Add_Female_Child"/>
+    <addaction name="separator"/>
+    <addaction name="action_Set_Document_Title"/>
+    <addaction name="separator"/>
+    <addaction name="action_Full_Text_Search"/>
+    <addaction name="action_Preferences"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <widget class="QMenu" name="menu_Recent_Files">
+     <property name="title">
+      <string>Recent Files</string>
+     </property>
+    </widget>
+    <addaction name="action_New"/>
+    <addaction name="action_Open"/>
+    <addaction name="menu_Recent_Files"/>
+    <addaction name="separator"/>
+    <addaction name="action_Save"/>
+    <addaction name="action_Save_As"/>
+    <addaction name="action_Close"/>
+    <addaction name="separator"/>
+    <addaction name="action_Import"/>
+    <addaction name="action_Export"/>
+    <addaction name="separator"/>
+    <addaction name="action_Exit"/>
+   </widget>
+   <widget class="QMenu" name="menu_View">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+    <widget class="QMenu" name="menuSwitch_To">
+     <property name="title">
+      <string>Switch To</string>
+     </property>
+     <addaction name="action_Tree_View"/>
+     <addaction name="action_Table_View"/>
+     <addaction name="action_List_View"/>
+     <addaction name="action_Icon_View"/>
+    </widget>
+    <addaction name="action_Expand"/>
+    <addaction name="action_Collapse"/>
+    <addaction name="action_Expand_All_Siblings"/>
+    <addaction name="action_Collapse_All_Siblings"/>
+    <addaction name="separator"/>
+    <addaction name="action_Expand_All"/>
+    <addaction name="action_Collapse_All"/>
+    <addaction name="separator"/>
+    <addaction name="action_LockOrUnlock"/>
+    <addaction name="menuSwitch_To"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuNavigate"/>
+   <addaction name="menu_View"/>
+   <addaction name="menu_Help"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_New"/>
+   <addaction name="action_Open"/>
+   <addaction name="action_Save"/>
+   <addaction name="action_Save_As"/>
+   <addaction name="action_Exit"/>
+   <addaction name="separator"/>
+   <addaction name="action_Edit_Inline"/>
+   <addaction name="action_Edit"/>
+   <addaction name="action_Delete"/>
+   <addaction name="separator"/>
+   <addaction name="action_Add_Family"/>
+   <addaction name="separator"/>
+   <addaction name="action_Add_Spouse"/>
+   <addaction name="action_Add_Male_Sibling"/>
+   <addaction name="action_Add_Female_Sibling"/>
+   <addaction name="action_Add_Wife_in_Law"/>
+   <addaction name="action_Add_Male_Child"/>
+   <addaction name="action_Add_Female_Child"/>
+   <addaction name="separator"/>
+   <addaction name="action_Go_to_Previous"/>
+   <addaction name="action_Go_to_Next"/>
+   <addaction name="action_Scroll_to_Top"/>
+   <addaction name="action_Scroll_to_Bottom"/>
+   <addaction name="separator"/>
+   <addaction name="action_Expand_All"/>
+   <addaction name="action_Collapse_All"/>
+   <addaction name="separator"/>
+   <addaction name="action_About"/>
+   <addaction name="action_What_s_this"/>
+  </widget>
+  <widget class="QDockWidget" name="dockWidgetSearchResults">
+   <property name="features">
+    <set>QDockWidget::DockWidgetClosable</set>
+   </property>
+   <property name="windowTitle">
+    <string>Search Results</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContentsSearchResults">
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <widget class="QTextBrowser" name="textBrowserSearchResults">
+       <property name="openLinks">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="action_New">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/filenew.png</normaloff>:/images/filenew.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;New</string>
+   </property>
+   <property name="toolTip">
+    <string>Create New File</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="action_Open">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/fileopen.png</normaloff>
+     <normalon>:/images/open.png</normalon>:/images/fileopen.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Open Existing File</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_Save">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/filesave.png</normaloff>:/images/filesave.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+   <property name="toolTip">
+    <string>Save File</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="action_Save_As">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/filesaveas.png</normaloff>:/images/filesaveas.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save &amp;As</string>
+   </property>
+   <property name="toolTip">
+    <string>Save As File</string>
+   </property>
+  </action>
+  <action name="action_Exit">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/exit.png</normaloff>:/images/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+  </action>
+  <action name="action_About">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/help_about.png</normaloff>:/images/help_about.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;About</string>
+   </property>
+  </action>
+  <action name="action_Add_Family">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/add_family.png</normaloff>:/images/add_family.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add Famil&amp;y</string>
+   </property>
+   <property name="toolTip">
+    <string>Add a new family to the tree.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I, F</string>
+   </property>
+  </action>
+  <action name="action_Close">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/fileclose.png</normaloff>:/images/fileclose.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Close</string>
+   </property>
+   <property name="toolTip">
+    <string>Close the currently open file.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="action_Expand_All">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/expandall.png</normaloff>:/images/expandall.png</iconset>
+   </property>
+   <property name="text">
+    <string>Expand All</string>
+   </property>
+   <property name="toolTip">
+    <string>Expand all items.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+=</string>
+   </property>
+  </action>
+  <action name="action_Collapse_All">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/collapseall.png</normaloff>:/images/collapseall.png</iconset>
+   </property>
+   <property name="text">
+    <string>Collapse All</string>
+   </property>
+   <property name="toolTip">
+    <string>Collapse all items.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+-</string>
+   </property>
+  </action>
+  <action name="action_Delete">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/edit-delete.png</normaloff>:/images/edit-delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Delete</string>
+   </property>
+   <property name="toolTip">
+    <string>Delete an existing family from the tree.</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+  </action>
+  <action name="action_Edit">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/editentry.png</normaloff>:/images/editentry.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Edit</string>
+   </property>
+   <property name="toolTip">
+    <string>Edit an existing Family/Individual from the tree.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="action_Scroll_to_Top">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/up.png</normaloff>:/images/up.png</iconset>
+   </property>
+   <property name="text">
+    <string>Scroll to &amp;Top</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Home</string>
+   </property>
+  </action>
+  <action name="action_Scroll_to_Bottom">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/down.png</normaloff>:/images/down.png</iconset>
+   </property>
+   <property name="text">
+    <string>Scroll to &amp;Bottom</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+End</string>
+   </property>
+  </action>
+  <action name="action_Add_Spouse">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/add_spouse.png</normaloff>:/images/add_spouse.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add &amp;Spouse</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I, S</string>
+   </property>
+  </action>
+  <action name="action_Add_Male_Sibling">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/add_male_sibling.png</normaloff>:/images/add_male_sibling.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add Male Si&amp;bling</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I, B, M</string>
+   </property>
+  </action>
+  <action name="action_Add_Male_Child">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/add_male_child.png</normaloff>:/images/add_male_child.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add Male &amp;Child</string>
+   </property>
+   <property name="toolTip">
+    <string>Add Male Child</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I, C, M</string>
+   </property>
+  </action>
+  <action name="action_Find">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/search.png</normaloff>:/images/search.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Find</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="action_Expand">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Expand</string>
+   </property>
+   <property name="shortcut">
+    <string>=</string>
+   </property>
+  </action>
+  <action name="action_Collapse">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Collapse</string>
+   </property>
+   <property name="shortcut">
+    <string>-</string>
+   </property>
+  </action>
+  <action name="action_Expand_All_Siblings">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Expand All Siblings</string>
+   </property>
+  </action>
+  <action name="action_Collapse_All_Siblings">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Collapse All Siblings</string>
+   </property>
+  </action>
+  <action name="action_Edit_Inline">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/edit-inline.png</normaloff>:/images/edit-inline.png</iconset>
+   </property>
+   <property name="text">
+    <string>Edit Inline</string>
+   </property>
+  </action>
+  <action name="action_Recent_File_1">
+   <property name="text">
+    <string>File 1</string>
+   </property>
+  </action>
+  <action name="action_Recent_File_2">
+   <property name="text">
+    <string>File 2</string>
+   </property>
+  </action>
+  <action name="action_Recent_File_3">
+   <property name="text">
+    <string>File 3</string>
+   </property>
+  </action>
+  <action name="action_Recent_File_4">
+   <property name="text">
+    <string>File 4</string>
+   </property>
+  </action>
+  <action name="action_What_s_this">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/whatsthis.png</normaloff>:/images/whatsthis.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;What's this?</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+F1</string>
+   </property>
+  </action>
+  <action name="action_About_Qt">
+   <property name="text">
+    <string>About Qt</string>
+   </property>
+  </action>
+  <action name="action_Add_Female_Child">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/add_female_child.png</normaloff>:/images/add_female_child.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add Female &amp;Child</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I, C, F</string>
+   </property>
+  </action>
+  <action name="action_Mark_as_Dead">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/dead.png</normaloff>:/images/dead.png</iconset>
+   </property>
+   <property name="text">
+    <string>Mark as Dead</string>
+   </property>
+  </action>
+  <action name="action_Add_Female_Sibling">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/add_female_sibling.png</normaloff>:/images/add_female_sibling.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add Female Sibling</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I, B, F</string>
+   </property>
+  </action>
+  <action name="action_FAQ">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/faq.png</normaloff>:/images/faq.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Frequently Asked Questions</string>
+   </property>
+  </action>
+  <action name="action_Tree_View">
+   <property name="text">
+    <string>Tree View</string>
+   </property>
+  </action>
+  <action name="action_Table_View">
+   <property name="text">
+    <string>Table View</string>
+   </property>
+  </action>
+  <action name="action_List_View">
+   <property name="text">
+    <string>List View</string>
+   </property>
+  </action>
+  <action name="action_Icon_View">
+   <property name="text">
+    <string>Icon View</string>
+   </property>
+  </action>
+  <action name="action_Go_to_Previous">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/back.png</normaloff>:/images/back.png</iconset>
+   </property>
+   <property name="text">
+    <string>Go to &amp;Previous</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Left</string>
+   </property>
+  </action>
+  <action name="action_Go_to_Next">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/forward.png</normaloff>:/images/forward.png</iconset>
+   </property>
+   <property name="text">
+    <string>Go to &amp;Next</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Right</string>
+   </property>
+  </action>
+  <action name="action_Manage_Unattached_Individuals">
+   <property name="text">
+    <string>&amp;Manage Unattached Individuals</string>
+   </property>
+  </action>
+  <action name="action_Export">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/fileexport.png</normaloff>:/images/fileexport.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Export</string>
+   </property>
+   <property name="toolTip">
+    <string>Export this document</string>
+   </property>
+  </action>
+  <action name="action_Import">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/fileimport.png</normaloff>:/images/fileimport.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Import</string>
+   </property>
+   <property name="toolTip">
+    <string>Import a document</string>
+   </property>
+  </action>
+  <action name="action_Mark_as_Alive">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/alive.png</normaloff>:/images/alive.png</iconset>
+   </property>
+   <property name="text">
+    <string>Mark as Alive</string>
+   </property>
+  </action>
+  <action name="action_Mark_as_Dummy">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Mark as Dummy</string>
+   </property>
+  </action>
+  <action name="action_Unmark_as_Dummy">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Unmark as Dummy</string>
+   </property>
+  </action>
+  <action name="action_Add_Wife_in_Law">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/copy_spouse.png</normaloff>:/images/copy_spouse.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add Wife-in-Law</string>
+   </property>
+  </action>
+  <action name="action_Set_Document_Title">
+   <property name="text">
+    <string>Set Document Title</string>
+   </property>
+  </action>
+  <action name="action_Add_Dummy_Spouse">
+   <property name="text">
+    <string>Add Dummy Spouse</string>
+   </property>
+  </action>
+  <action name="action_Preferences">
+   <property name="text">
+    <string>Preferences</string>
+   </property>
+  </action>
+  <action name="action_Full_Text_Search">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/images/search.png</normaloff>:/images/search.png</iconset>
+   </property>
+   <property name="text">
+    <string>Full Text Search</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="action_LockOrUnlock">
+   <property name="text">
+    <string>Lock Main Window</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>PieView</class>
+   <extends>QWidget</extends>
+   <header>PieView.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>FamilyTreeView</class>
+   <extends>QWidget</extends>
+   <header>FamilyTreeView.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>EventTimeLineView</class>
+   <extends>QWidget</extends>
+   <header>EventTimeLineView.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="MainWindow.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>action_Scroll_to_Top</sender>
+   <signal>triggered()</signal>
+   <receiver>treeView</receiver>
+   <slot>scrollToTop()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>62</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_Scroll_to_Bottom</sender>
+   <signal>triggered()</signal>
+   <receiver>treeView</receiver>
+   <slot>scrollToBottom()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>62</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_Scroll_to_Top</sender>
+   <signal>triggered()</signal>
+   <receiver>tableView</receiver>
+   <slot>scrollToTop()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>62</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_Scroll_to_Bottom</sender>
+   <signal>triggered()</signal>
+   <receiver>tableView</receiver>
+   <slot>scrollToBottom()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>62</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_Scroll_to_Top</sender>
+   <signal>triggered()</signal>
+   <receiver>listView</receiver>
+   <slot>scrollToTop()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>62</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_Scroll_to_Bottom</sender>
+   <signal>triggered()</signal>
+   <receiver>listView</receiver>
+   <slot>scrollToBottom()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>62</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_Scroll_to_Top</sender>
+   <signal>triggered()</signal>
+   <receiver>familyTreeView</receiver>
+   <slot>scrollToTop()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>62</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_Scroll_to_Bottom</sender>
+   <signal>triggered()</signal>
+   <receiver>familyTreeView</receiver>
+   <slot>scrollToBottom()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>62</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_Full_Text_Search</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>dockWidgetSearchResults</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>411</x>
+     <y>470</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dockWidgetSearchResults</sender>
+   <signal>visibilityChanged(bool)</signal>
+   <receiver>action_Full_Text_Search</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>411</x>
+     <y>470</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

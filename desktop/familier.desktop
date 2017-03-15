@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Familier
+Comment=Genealogy Software
+Exec=Familier
+Icon=familier
+Terminal=false
+MultipleArgs=false
+Type=Application
+Categories=Office;Utility;
+

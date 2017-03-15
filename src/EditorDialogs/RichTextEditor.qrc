@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/RichTextEditor/format-justify-center.png</file>
+        <file>images/RichTextEditor/format-justify-fill.png</file>
+        <file>images/RichTextEditor/format-justify-left.png</file>
+        <file>images/RichTextEditor/format-justify-right.png</file>
+        <file>images/RichTextEditor/edit-copy.png</file>
+        <file>images/RichTextEditor/edit-cut.png</file>
+        <file>images/RichTextEditor/edit-delete.png</file>
+        <file>images/RichTextEditor/edit-paste.png</file>
+        <file>images/RichTextEditor/edit-redo.png</file>
+        <file>images/RichTextEditor/edit-undo.png</file>
+        <file>images/RichTextEditor/insert-link.png</file>
+    </qresource>
+</RCC>
